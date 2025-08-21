@@ -23,9 +23,9 @@ public class PlayerDTO {
 
     private String nickname;
 
-    private LocalDate birthDate;
+    private boolean male;
 
-    private Float rank;
+    private LocalDate birthDate;
 
     private String primaryPosition;
 

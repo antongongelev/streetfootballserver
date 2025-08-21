@@ -36,10 +36,10 @@ public class Player {
     private String nickname;
 
     @Column
-    private LocalDate birthDate;
+    private boolean male;
 
     @Column
-    private Float rank;
+    private LocalDate birthDate;
 
     @Column
     private String primaryPosition;

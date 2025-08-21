@@ -23,6 +23,10 @@ public class EventMapper implements Mapper<Event, EventDTO> {
                 .isFinished(event.isFinished())
                 .isCancelled(event.isCancelled())
                 .minPlayers(event.getMinPlayers())
+                .maxAge(event.getMaxAge())
+                .minAge(event.getMinAge())
+                .maxAge(event.getMaxAge())
+                .durationMin(event.getDurationMin())
                 .createdAt(event.getCreatedAt())
                 .build();
     }
@@ -39,6 +43,10 @@ public class EventMapper implements Mapper<Event, EventDTO> {
                 .isFinished(event.isFinished())
                 .isCancelled(event.isCancelled())
                 .minPlayers(event.getMinPlayers())
+                .maxPlayers(event.getMaxPlayers())
+                .minAge(event.getMinAge())
+                .maxAge(event.getMaxAge())
+                .durationMin(event.getDurationMin())
                 .createdAt(event.getCreatedAt())
                 .build();
     }

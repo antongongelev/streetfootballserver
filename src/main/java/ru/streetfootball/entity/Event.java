@@ -47,6 +47,18 @@ public class Event {
     @Column
     private Integer minPlayers;
 
+    @Column
+    private Integer maxPlayers;
+
+    @Column
+    private Integer minAge;
+
+    @Column
+    private Integer maxAge;
+
+    @Column
+    private Integer durationMin;
+
     @CreationTimestamp
     @Column
     private Instant createdAt;

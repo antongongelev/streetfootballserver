@@ -28,6 +28,14 @@ public class EventDTO {
 
     private Integer minPlayers;
 
+    private Integer maxPlayers;
+
+    private Integer minAge;
+
+    private Integer maxAge;
+
+    private Integer durationMin;
+
     private Instant createdAt;
 
 }
