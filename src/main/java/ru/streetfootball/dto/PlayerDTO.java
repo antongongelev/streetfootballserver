@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ru.streetfootball.util.enums.Position;
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -27,9 +28,9 @@ public class PlayerDTO {
 
     private LocalDate birthDate;
 
-    private String primaryPosition;
+    private Position primaryPosition;
 
-    private String secondaryPosition;
+    private Position secondaryPosition;
 
     private String avatar;
 

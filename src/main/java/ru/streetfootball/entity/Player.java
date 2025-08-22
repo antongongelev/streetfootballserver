@@ -2,6 +2,8 @@ package ru.streetfootball.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -12,6 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import ru.streetfootball.util.enums.Position;
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -42,10 +45,12 @@ public class Player {
     private LocalDate birthDate;
 
     @Column
-    private String primaryPosition;
+    @Enumerated(EnumType.STRING)
+    private Position primaryPosition;
 
     @Column
-    private String secondaryPosition;
+    @Enumerated(EnumType.STRING)
+    private Position secondaryPosition;
 
     @CreationTimestamp
     @Column
