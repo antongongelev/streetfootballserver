@@ -7,7 +7,6 @@ CREATE TABLE IF NOT EXISTS player
     birth_date         DATE        NOT NULL,
     primary_position   TEXT        NOT NULL,
     secondary_position TEXT        NULL,
-    avatar             TEXT        NULL,
     created_at         TIMESTAMPTZ NOT NULL,
 
     CONSTRAINT pk_player_id PRIMARY KEY (id),

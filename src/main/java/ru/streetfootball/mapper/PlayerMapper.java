@@ -17,7 +17,6 @@ public class PlayerMapper implements Mapper<Player, PlayerDTO> {
                 .birthDate(player.getBirthDate())
                 .primaryPosition(player.getPrimaryPosition())
                 .secondaryPosition(player.getSecondaryPosition())
-                .avatar(player.getAvatar())
                 .createdAt(player.getCreatedAt())
                 .build();
     }
@@ -32,7 +31,6 @@ public class PlayerMapper implements Mapper<Player, PlayerDTO> {
                 .birthDate(player.getBirthDate())
                 .primaryPosition(player.getPrimaryPosition())
                 .secondaryPosition(player.getSecondaryPosition())
-                .avatar(player.getAvatar())
                 .createdAt(player.getCreatedAt())
                 .build();
     }

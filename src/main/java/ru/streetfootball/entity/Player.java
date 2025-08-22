@@ -47,9 +47,6 @@ public class Player {
     @Column
     private String secondaryPosition;
 
-    @Column
-    private String avatar;
-
     @CreationTimestamp
     @Column
     private Instant createdAt;
