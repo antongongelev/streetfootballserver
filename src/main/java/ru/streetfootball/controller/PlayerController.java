@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -58,6 +59,12 @@ public class PlayerController {
     @PostMapping(value = "/avatar/{telegramId}", consumes = "multipart/form-data")
     public ResponseEntity<Void> uploadAvatar(@PathVariable Long telegramId, @RequestParam("avatar") MultipartFile avatarFile) {
         playerService.uploadAvatar(telegramId, avatarFile);
+        return ResponseEntity.noContent().build();
+    }
+
+    @DeleteMapping("/avatar/{telegramId}")
+    public ResponseEntity<Void> deleteAvatar(@PathVariable Long telegramId) {
+        playerService.deleteAvatar(telegramId);
         return ResponseEntity.noContent().build();
     }
 

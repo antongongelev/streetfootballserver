@@ -40,4 +40,8 @@ public class PlayerService {
         return avatarService.getAvatar(telegramId);
     }
 
+    public void deleteAvatar(Long telegramId) {
+        avatarService.deleteAvatar(telegramId);
+    }
+
 }

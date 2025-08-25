@@ -52,6 +52,24 @@ public class AvatarService {
         saveFile(avatarFile, fileName);
     }
 
+    public void deleteAvatar(Long telegramId) {
+        try {
+            var avatarPath = getAvatarPath(telegramId);
+            if (avatarPath != null && Files.exists(avatarPath)) {
+                Files.delete(avatarPath);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to delete avatar", e);
+        }
+    }
+
+    /**
+     * Проверка существования аватара
+     */
+    public boolean avatarExists(Long telegramId) {
+        return getAvatarPath(telegramId) != null;
+    }
+
     /**
      * Валидация изображения
      */
