@@ -32,8 +32,6 @@ public class PlayerDTO {
 
     private Position secondaryPosition;
 
-    private String avatar;
-
     private Instant createdAt;
 
 }
