@@ -21,4 +21,9 @@ public class LocationMapper implements Mapper<Point, LocationDTO> {
     public Point entityFromDto(LocationDTO locationDTO) {
         return geometryFactory.createPoint(new Coordinate(locationDTO.getLongitude(), locationDTO.getLatitude()));
     }
+
+    @Override
+    public void updateEntity(Point point, LocationDTO locationDTO) {
+
+    }
 }

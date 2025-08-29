@@ -6,4 +6,6 @@ public interface Mapper<ENTITY, DTO> {
 
     ENTITY entityFromDto(DTO dto);
 
+    void updateEntity(ENTITY entity, DTO dto);
+
 }

@@ -50,5 +50,10 @@ public class EventMapper implements Mapper<Event, EventDTO> {
                 .createdAt(event.getCreatedAt())
                 .build();
     }
+
+    @Override
+    public void updateEntity(Event event, EventDTO eventDTO) {
+
+    }
 }
 

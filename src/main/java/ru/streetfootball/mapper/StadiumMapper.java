@@ -43,4 +43,9 @@ public class StadiumMapper implements Mapper<Stadium, StadiumDTO> {
                 .build();
     }
 
+    @Override
+    public void updateEntity(Stadium stadium, StadiumDTO stadiumDTO) {
+
+    }
+
 }

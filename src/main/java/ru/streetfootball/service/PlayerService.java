@@ -25,8 +25,13 @@ public class PlayerService {
     }
 
     public PlayerDTO update(PlayerDTO player) {
-        var saved = playerRepository.save(playerMapper.entityFromDto(player));
-        return playerMapper.dtoFromEntity(saved);
+        var currentPlayer = playerRepository.findByTelegramId(player.getTelegramId());
+        if (currentPlayer.isEmpty()) {
+            throw new RuntimeException(String.format("Player with telegramId = %s not found", player.getTelegramId()));
+        }
+        playerMapper.updateEntity(currentPlayer.get(), player);
+        var updated = playerRepository.save(currentPlayer.get());
+        return playerMapper.dtoFromEntity(updated);
     }
 
 }

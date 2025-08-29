@@ -34,4 +34,13 @@ public class PlayerMapper implements Mapper<Player, PlayerDTO> {
                 .createdAt(player.getCreatedAt())
                 .build();
     }
+
+    @Override
+    public void updateEntity(Player player, PlayerDTO playerDTO) {
+        player.setNickname(playerDTO.getNickname());
+        player.setMale(playerDTO.isMale());
+        player.setBirthDate(playerDTO.getBirthDate());
+        player.setPrimaryPosition(playerDTO.getPrimaryPosition());
+        player.setSecondaryPosition(playerDTO.getSecondaryPosition());
+    }
 }
